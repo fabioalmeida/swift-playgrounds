@@ -15,6 +15,7 @@ On the other hand, when you first get your hands on it, you can see that if you 
 
 With this playground I try to cover some of the most common cases like:
 * Simple JSON that corresponds exactly to the model;
+* Models with properties with different names from what comes from the service;
 * Model with other nested models;
 * JSON Arrays;
 * Models that come inside more complex JSON objects, not directly in the root.

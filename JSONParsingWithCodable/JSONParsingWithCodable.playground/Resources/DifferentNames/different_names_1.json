@@ -1,0 +1,6 @@
+{
+    "first_name" : "The first name",
+    "last_name" : "The last name",
+    "url" : "http://www.google.com",
+    "field_to_ignore" : "This field is not important"
+}
