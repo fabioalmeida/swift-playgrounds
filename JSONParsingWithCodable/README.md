@@ -11,7 +11,7 @@ Here you can find some of the most common cases when dealing with JSON responses
 
 With Swift 4 release the iOS developers life improved when it comes to parsing JSON files thanks to the `Codable` protocol.
 
-On the other hand, when you first get your hands to it, you can see that if you don't have a model that corresponds exactly to your service response, thinks can become difficult really quickly.
+On the other hand, when you first get your hands on it, you can see that if you don't have a model that corresponds exactly to your service response, things can become difficult quite fast.
 
 With this playground I try to cover some of the most common cases like:
 * Simple JSON that corresponds exactly to the model;
@@ -22,4 +22,4 @@ With this playground I try to cover some of the most common cases like:
 
 ## Misc
 
-For reference, this playground was created with `Xcode 9.0.1`.
+For reference, this playground was created using `Xcode 9.0.1`.
