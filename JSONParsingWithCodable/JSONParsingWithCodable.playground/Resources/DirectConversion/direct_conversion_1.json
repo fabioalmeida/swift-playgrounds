@@ -1,0 +1,6 @@
+{
+    "name" : "The first model name",
+    "description" : "This represents some description",
+    "age" : 28,
+    "address" : "This is an actual address"
+}
