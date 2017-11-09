@@ -76,7 +76,7 @@ if let data6 = loadFile(withName: "DifferentNames/different_names_1") {
 
 
 // --------------------------------------------
-// ---------- Nested Models Example -----------
+// ---------- Nested Models Examples ----------
 // --------------------------------------------
 
 // nested models example
@@ -97,4 +97,25 @@ if let data8 = loadFile(withName: "NestedModels/nested_model_2") {
     let model = try? JSONDecoder().decode(GenericResponse<[SimpleModel]>.self, from: data8)
     print(model as Any)
     print("----- Example 8 ----- \n")
+}
+
+
+
+
+
+// --------------------------------------------
+// -------- Complex Responses Examples --------
+// --------------------------------------------
+
+// complex responses example
+// if you look at the implementation of ComplexResponseModel
+// you can check that we are overriding the `init(from decoder: Decoder)` method
+// instead of parsing all fields one by one, we created a Raw model that represents the json structure
+// with all its nested objects; then we decode this object which also conforms to Codable and just access its properties
+if let data9 = loadFile(withName: "ComplexResponses/complex_response") {
+
+    let model = try? JSONDecoder().decode(ComplexResponseModel.self, from: data9)
+    print(model as Any)
+
+    print("----- Example 9 ----- \n")
 }

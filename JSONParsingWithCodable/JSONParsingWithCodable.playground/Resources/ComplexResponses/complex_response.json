@@ -1,0 +1,15 @@
+{
+    "id": 123554,
+    "name_info": {
+        "first_name" : "The first name",
+        "last_name" : "The last name"
+        },
+    "address_info": {
+        "id": 987,
+        "country": {
+            "id" : 12,
+            "name" : "United States"
+        },
+        "street" : "Liberty Street 45"
+    }
+}
