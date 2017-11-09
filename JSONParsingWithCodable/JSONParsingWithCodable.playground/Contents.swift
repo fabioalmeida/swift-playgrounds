@@ -58,11 +58,11 @@ if let data5 = loadFile(withName: "DirectConversion/direct_conversion_dictionary
 
 
 // --------------------------------------------
-// -------- Different Names Examples ----------
+// -------- Different Names Example -----------
 // --------------------------------------------
 
 // different names example
-// if you look at the implementation of DifferentNamesModel, you can see one important things:
+// if you look at the implementation of DifferentNamesModel, you can see one important thing:
 // An enum which conforms to CodingKey is declared, stating the different names 
 // This enum needs to be exhaustive, and if you don't want to write a custom intitializer, call it CodingKeys
 if let data6 = loadFile(withName: "DifferentNames/different_names_1") {
@@ -70,4 +70,31 @@ if let data6 = loadFile(withName: "DifferentNames/different_names_1") {
     let model = try? JSONDecoder().decode(DifferentNamesModel.self, from: data6)
     print(model as Any)
     print("----- Example 6 ----- \n")
+}
+
+
+
+
+// --------------------------------------------
+// ---------- Nested Models Example -----------
+// --------------------------------------------
+
+// nested models example
+// if you look at the implementation of GenericResponse, you can see one important thing:
+// The result has a generic type which implements the Codable protocol, and this model implements the codable itself
+// With this, we can easily have a generic response with any type of object we want to parse
+if let data7 = loadFile(withName: "NestedModels/nested_model_1") {
+
+    let model = try? JSONDecoder().decode(GenericResponse<DifferentNamesModel>.self, from: data7)
+    print(model as Any)
+    print("----- Example 7 ----- \n")
+}
+
+// nested models example
+// similarly to the previous example, we can have a reponse with an array of objects that also conform to Codable
+if let data8 = loadFile(withName: "NestedModels/nested_model_2") {
+
+    let model = try? JSONDecoder().decode(GenericResponse<[SimpleModel]>.self, from: data8)
+    print(model as Any)
+    print("----- Example 8 ----- \n")
 }

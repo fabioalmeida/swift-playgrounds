@@ -1,6 +1,6 @@
 import Foundation
 
-public struct DifferentNamesModel: Decodable {
+public struct DifferentNamesModel: Codable {
 
     let firstName: String
     let lastName: String

@@ -1,0 +1,16 @@
+{
+    "statusCode": 200,
+    "result": [
+               {
+               "name" : "First model name",
+               "description" : "First description",
+               "age" : 28,
+               "address" : "This is an actual address"
+               },
+               {
+               "name" : "The second model name",
+               "description" : "Second description",
+               "age" : 33
+               }
+            ]
+}
